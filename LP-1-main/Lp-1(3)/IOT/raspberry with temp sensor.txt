@@ -1,0 +1,16 @@
+#include "Arduino_SensorKit.h"
+void setup() {
+// put your setup code here, to run once:
+Serial.begin(9600);
+Environmnet.begin();
+}
+void loop() {
+// put your main code here, to run repeatedly:
+Serial.print("Temperature = ");
+Serial.print(Environment.readTemperature());
+Serial.println(" C ");
+Serial.print("Humidity= ");
+Serial.print(Environment.readHumidity());
+Serial.println("%");
+delay(2000);
+}
